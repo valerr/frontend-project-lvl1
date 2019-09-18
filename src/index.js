@@ -1,9 +1,11 @@
 import readlineSync from 'readline-sync';
-import { cons, car, cdr } from '@hexlet/pairs';
+import { cons, cdr } from '@hexlet/pairs';
 
 export const quesAns = (question, answer) => cons(question, answer);
-const getQuestion = quesAns => car(quesAns);
-const getAnswer = quesAns => cdr(quesAns);
+
+// const getQuestion = (question, answer) => car(question, answer);
+
+const getAnswer = (question, answer) => cdr(question, answer);
 
 const getPlayerName = () => {
   const playerName = readlineSync.question('May I have your name? ');
@@ -13,29 +15,31 @@ const getPlayerName = () => {
 const rounds = 3;
 
 const launcher = (description, makeGameData) => {
-	console.log('Welcome to the Brain Games!\n');
-	console.log(`${description}`);
+  console.log('Welcome to the Brain Games!\n');
+  console.log(`${description}`);
 
-	const playerName = getPlayerName();
+  const playerName = getPlayerName();
 
-	console.log(`Hello, ${playerName}!\n`);
+  console.log(`Hello, ${playerName}!\n`);
 
-	for (let i = 1; i <= rounds; i++) {
-		const gameData = makeGameData();
-		const question = getQuestion(gameData);
-		const correctAnswer = getAnswer(gameData);
+  for (let i = 1; i <= rounds; i += 1) {
+    const gameData = makeGameData();
 
-		const playerAnswer = readlineSync.question('Your answer: ');
+    // const question = getQuestion(gameData);
 
-		if (playerAnswer === correctAnswer) {
-			console.log('Correct!');
-		} else {
-			console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    const correctAnswer = getAnswer(gameData);
+
+    const playerAnswer = readlineSync.question('Your answer: ');
+
+    if (playerAnswer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${playerName}!`);
       return;
     }
-	}
-	console.log(`Congratulations, ${playerName}!`);
+  }
+  console.log(`Congratulations, ${playerName}!`);
 };
 
 export default launcher;

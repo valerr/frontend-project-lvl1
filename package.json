@@ -34,7 +34,6 @@
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
     "@babel/preset-env": "^7.6.0",
-    "@hexlet/pairs": "^1.0.10",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -42,6 +41,7 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "@hexlet/pairs": "^1.0.10"
   }
 }
