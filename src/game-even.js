@@ -1,11 +1,11 @@
 import launcher, { quesAns } from './index';
 
-const gerRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const description = 'Answer "yes" if the number is even, otherwise the answer is "no".';
 
 const showQuestion = () => {
-  const number = gerRandomInt(1, 100);
+  const number = getRandomInt(1, 100);
   console.log(`Question: ${number}`);
   return number;
 };
