@@ -1,5 +1,4 @@
-import { getRandomInt } from './game-even';
-import launcher, { quesAns } from './index';
+import launcher, { quesAns, getRandomInt } from './utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 

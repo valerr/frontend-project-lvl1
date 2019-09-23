@@ -1,6 +1,4 @@
-import launcher, { quesAns } from './index';
-
-export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+import launcher, { quesAns, getRandomInt } from './utils';
 
 const description = 'Answer "yes" if the number is even, otherwise the answer is "no".';
 
