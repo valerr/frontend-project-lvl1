@@ -1,4 +1,4 @@
-import launcher, { quesAns, getRandomInt } from './utils';
+import launcher, { quesAns, getRandomInt } from '../utils';
 
 const description = 'What number is missing in the progression?';
 const progrLength = 10;

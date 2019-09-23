@@ -2,14 +2,14 @@
 <img src="https://travis-ci.org/valerr/frontend-project-lvl1.svg?branch=master" /></a>
 
 ## Install
-<code> sudo npm link </code>
+<code> make install </code>
 
-<a href="https://asciinema.org/a/sIvPEqlOiVe8xwgmg388N4M8y" target="_blank"><img src="https://asciinema.org/a/sIvPEqlOiVe8xwgmg388N4M8y.svg"/></a>
+<a href="https://asciinema.org/a/WGisBlPruB1EXT5AwnAZfbYFk" target="_blank"><img src="https://asciinema.org/a/WGisBlPruB1EXT5AwnAZfbYFk.svg" /></a>
 
 ## How to play Even game
 <code> brain-even </code>
 
-<a href="https://asciinema.org/a/j5oEpR8gqtRZ3cOlgK7NcREUR" target="_blank"><img src="https://asciinema.org/a/j5oEpR8gqtRZ3cOlgK7NcREUR.svg" /></a>
+<a href="https://asciinema.org/a/dmrTGHNNOaClJ0LuhEfAHHvoM?speed=2" target="_blank"><img src="https://asciinema.org/a/dmrTGHNNOaClJ0LuhEfAHHvoM.svg" /></a>
 
 ## How to play Calc game
 <code> brain-calc </code>

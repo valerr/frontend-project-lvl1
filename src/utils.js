@@ -9,7 +9,7 @@ export const quesAns = (question, answer) => cons(question, answer);
 
 const getAnswer = (question, answer) => cdr(question, answer);
 
-const rounds = 3;
+const roundsCount = 3;
 
 const launcher = (description, makeGameData) => {
   console.log('Welcome to the Brain Games!\n');
@@ -19,7 +19,7 @@ const launcher = (description, makeGameData) => {
 
   console.log(`Hello, ${playerName}!\n`);
 
-  for (let i = 1; i <= rounds; i += 1) {
+  for (let i = 1; i <= roundsCount; i += 1) {
     const gameData = makeGameData();
 
     // const question = getQuestion(gameData);

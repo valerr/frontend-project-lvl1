@@ -1,4 +1,4 @@
-import launcher, { quesAns, getRandomInt } from './utils';
+import launcher, { quesAns, getRandomInt } from '../utils';
 
 const description = 'Answer "yes" if the number is even, otherwise the answer is "no".';
 

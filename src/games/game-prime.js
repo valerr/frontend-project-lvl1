@@ -1,4 +1,4 @@
-import launcher, { quesAns, getRandomInt } from './utils';
+import launcher, { quesAns, getRandomInt } from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
