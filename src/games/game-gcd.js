@@ -1,4 +1,6 @@
-import launcher, { quesAns, getRandomInt } from '../utils';
+import { cons } from '@hexlet/pairs';
+import launcher from '../index';
+import getRandomInt from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -25,14 +27,13 @@ const findGcd = (a, b) => {
 };
 
 const makeGameData = () => {
-  const firstNum = getRandomInt(1, 100);
-  const secondNum = getRandomInt(1, 100);
+  const first = getRandomInt(1, 100);
+  const second = getRandomInt(1, 100);
 
-  const gameAnswer = String(findGcd(firstNum, secondNum));
-  const question = `${firstNum} ${secondNum}`;
-  console.log(`Question: ${question}`);
-  return quesAns(question, gameAnswer);
+  const correctAnswer = String(findGcd(first, second));
+  const question = `${first} ${second}`;
+
+  return cons(question, correctAnswer);
 };
 
-const playGcd = () => launcher(description, makeGameData);
-export default playGcd;
+export default () => launcher(description, makeGameData);

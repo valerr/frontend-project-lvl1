@@ -1,31 +1,30 @@
-import launcher, { quesAns, getRandomInt } from '../utils';
+import { cons } from '@hexlet/pairs';
+import launcher from '../index';
+import getRandomInt from '../utils';
 
 const description = 'What number is missing in the progression?';
-const progrLength = 10;
+const progressionLength = 10;
 
-const makeProgression = (firstNum, diff) => {
-  const progression = [];
+const makeProgression = (start, difference, length) => {
+  const result = [];
 
-  for (let i = 0; i < progrLength; i += 1) {
-    progression[i] = firstNum + diff * i;
+  for (let i = 0; i < length; i += 1) {
+    result[i] = start + difference * i;
   }
-  return progression;
+  return result;
 };
 
 const makeGameData = () => {
   const num1 = getRandomInt(1, 50);
   const step = getRandomInt(1, 10);
-  const progression = makeProgression(num1, step);
-  const hiddenInd = getRandomInt(1, progrLength);
+  const progression = makeProgression(num1, step, progressionLength);
+  const indexHiddenElem = getRandomInt(0, progressionLength - 1);
 
-  const gameAnswer = String(progression[hiddenInd]);
-  progression[hiddenInd] = '..';
+  const correctAnswer = String(progression[indexHiddenElem]);
+  progression[indexHiddenElem] = '..';
   const question = progression.join(' ');
 
-  console.log(`Question: ${question}`);
-
-  return quesAns(question, gameAnswer);
+  return cons(question, correctAnswer);
 };
 
-const playProgression = () => launcher(description, makeGameData);
-export default playProgression;
+export default () => launcher(description, makeGameData);

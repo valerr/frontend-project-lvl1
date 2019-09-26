@@ -1,21 +1,16 @@
-import launcher, { quesAns, getRandomInt } from '../utils';
+import { cons } from '@hexlet/pairs';
+import launcher from '../index';
+import getRandomInt from '../utils';
 
 const description = 'Answer "yes" if the number is even, otherwise the answer is "no".';
-
-const showQuestion = () => {
-  const number = getRandomInt(1, 100);
-  console.log(`Question: ${number}`);
-  return number;
-};
 
 const isEven = (num) => num % 2 === 0;
 
 const makeGameData = () => {
-  const number = showQuestion();
-  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  const question = getRandomInt(1, 100);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
 
-  return quesAns(number, correctAnswer);
+  return cons(question, correctAnswer);
 };
 
-const playEven = () => launcher(description, makeGameData);
-export default playEven;
+export default () => launcher(description, makeGameData);

@@ -1,4 +1,6 @@
-import launcher, { quesAns, getRandomInt } from '../utils';
+import { cons } from '@hexlet/pairs';
+import launcher from '../index';
+import getRandomInt from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -15,12 +17,9 @@ const isPrime = (num) => {
 
 const makeGameData = () => {
   const question = getRandomInt(1, 100);
-  const gameAnswer = isPrime(question) ? 'yes' : 'no';
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  console.log(`Question: ${question}`);
-
-  return quesAns(question, gameAnswer);
+  return cons(question, correctAnswer);
 };
 
-const playPrime = () => launcher(description, makeGameData);
-export default playPrime;
+export default () => launcher(description, makeGameData);
