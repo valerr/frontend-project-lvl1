@@ -1,4 +1,4 @@
-<a href="https://codeclimate.com/github/valerr/frontend-project-lvl1/maintainability"></a>
+<a href="https://codeclimate.com/github/valerr/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/658bfa689902a1d4b263/maintainability" /></a>
 [![Build Status](https://travis-ci.org/valerr/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/valerr/frontend-project-lvl1)
 
 ## Install
