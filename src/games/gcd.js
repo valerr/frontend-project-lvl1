@@ -14,8 +14,6 @@ const findGcd = (a, b) => {
     return smaller;
   }
 
-  // алгоритм Евклида делением
-
   while (number1 !== 0 && number2 !== 0) {
     if (number1 > number2) {
       number1 %= number2;
